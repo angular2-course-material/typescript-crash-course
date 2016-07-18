@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "module": "system",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -9,15 +10,23 @@
     "rootDir": ".",
     "sourceMap": true,
     "outDir": "dist",
-    "target": "es5"
+    "target": "es5",
+    "moduleResolution": "node"
   },
   "files": [
     "scripts/types.ts",
     "scripts/arrow-functions.ts",
     "scripts/classes.ts",
+    "scripts/classes-1.ts",
+    "scripts/classes-2.ts",
+    "scripts/classes-3.ts",
+    "scripts/classes-4.ts",
     "scripts/declaration-files.ts",
     "scripts/functions.ts",
     "scripts/interfaces.ts",
+    "scripts/zip-modules/index.ts",
+    "scripts/zip-modules/string-validator.ts",
+    "scripts/zip-modules/zip-code-validator.ts",
     "scripts/modules.ts",
     "scripts/type-inference.ts",
     "scripts/types.ts",
