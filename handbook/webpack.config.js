@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './variable-declarations.ts',
+        index: './classes.ts',
     },
     resolve: {
         extensions: [".ts"]

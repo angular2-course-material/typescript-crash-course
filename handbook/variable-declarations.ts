@@ -1,4 +1,4 @@
-console.log('-----DECLARACION VAR-----');
+/*console.log('-----DECLARACION VAR-----');
 // var declaration
 var message = "Hello, world!";
 // accessing vairables within a function
@@ -28,7 +28,7 @@ function f2() {
 }
 
 console.log('Scope de declaracion var: f2=', f2());
-
+*/
 // scoping rules (var-scoping or function-scoping)
 /*function m(shouldInitialize: boolean) {
     if (shouldInitialize) {
@@ -43,9 +43,10 @@ console.log('Scope de declaracion var: ', m(false));
 */
 
 /*for (var i = 0; i < 10; i++) {
-    setTimeout(function() { console.log(i); }, 100 * i);
+    setTimeout(function() {
+        console.log(i); 
+    }, 100 * i);
 }*/
-
 // let declarations 
 /*console.log('-----DECLARACION LET-----');
 
@@ -98,6 +99,7 @@ const kitty = {
     name: "Aurora",
     numLives: numLivesForCat,
 }
+kitty.name = '12314'
 console.log('original value: ', kitty);
 */
 // Error
@@ -147,7 +149,7 @@ let {a, b} = o;
 console.log(a, b);
 */
 // Default values
-/*
+
 function keepWholeObject(wholeObject: {a: string, b?: number}) {
     let {a, b = 1001} = wholeObject;
     console.log(a, b);
@@ -155,9 +157,9 @@ function keepWholeObject(wholeObject: {a: string, b?: number}) {
 
 keepWholeObject({a: 'test'});
 keepWholeObject({a: 'test', b: 5});
-*/
+
 // Function declarations
-/*console.log('-----DECLARACION DESCTRUCTURADA: FUNCIONES-----');
+console.log('-----DECLARACION DESCTRUCTURADA: FUNCIONES-----');
 
 type C = {a: string, b?: number}
 function e({a, b}: C): void {
@@ -167,7 +169,7 @@ function e({a, b}: C): void {
 function r({a, b} = {a: "*", b: 0}): void {
   console.log("Default values: ", a, b);
 }
-r(); // ok, default to {a: "", b: 0}
+r({a: "====", b: 3}); // ok, default to {a: "", b: 0}
 
 function t({a, b = 0} = {a: "-"}): void {
     console.log(a, b)
@@ -178,4 +180,3 @@ t({a: "yes"}); // ok, default b = 0
 t(); // ok, default to {a: ""}, which then defaults b = 0
 //t({b: "yes"}) // error, 'a' is required if you supply an argument
 //t({}) // error, 'a' is required if you supply an argument
-*/
